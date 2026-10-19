@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Short Stay Data | Verified short-term rental compliance data</title>
+<meta name="description" content="Short Stay Data is an independent short-term rental compliance data service. We find listings that appear to operate without a valid local registration, verify them against public city and county records, and deliver documented monthly data.">
+<meta name="theme-color" content="#0f1b2d">
+<link rel="canonical" href="https://shortstaydata.com/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b2d'/%3E%3Cpath d='M7 16.5 16 9l9 7.5V24H7z' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linejoin='round'/%3E%3Cpath d='m12.3 19.6 2.6 2.4 4.8-5' fill='none' stroke='%238fb3ff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Short Stay Data">
+<meta property="og:title" content="Short Stay Data | Verified short-term rental compliance data">
+<meta property="og:description" content="Short Stay Data is an independent short-term rental compliance data service. We find listings that appear to operate without a valid local registration, verify them against public city and county records, and deliver documented monthly data.">
+<meta property="og:url" content="https://shortstaydata.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Short Stay Data | Verified short-term rental compliance data">
+<meta name="twitter:description" content="Short Stay Data is an independent short-term rental compliance data service. We find listings that appear to operate without a valid local registration, verify them against public city and county records, and deliver documented monthly data.">
+<style>
+  :root{
+    --ink:#0f1b2d; --ink-2:#3a4a60; --muted:#6b7a90; --line:#e3e8ef;
+    --bg:#ffffff; --bg-2:#f5f7fa; --accent:#1d5fd1; --accent-2:#0f3f94;
+    --ok:#1f7a4d; --warn:#a15c00; --flag:#b42318; --radius:12px;
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+  .mark{width:28px;height:28px;border-radius:7px;background:var(--ink);display:grid;place-items:center}
+  .mark svg{display:block}
+  .nav ul{list-style:none;display:flex;gap:24px;margin:0;padding:0}
+  .nav ul a{color:var(--ink-2);text-decoration:none;font-size:15px}
+  .nav ul a:hover{color:var(--accent)}
+  .btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-2)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:#c9d2de}
+  .btn-ghost:hover{border-color:var(--ink)}
+  section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12.5px;font-weight:700;color:var(--accent);margin:0 0 12px}
+  h1,h2,h3{letter-spacing:-.02em;line-height:1.15;margin:0}
+  h1{font-size:clamp(34px,5vw,54px);font-weight:750;max-width:900px}
+  h2{font-size:clamp(28px,3.4vw,38px);font-weight:700;margin-bottom:16px}
+  h3{font-size:19px;font-weight:650;margin-bottom:8px}
+  .lede{font-size:clamp(18px,2vw,21px);color:var(--ink-2);max-width:760px;margin:22px 0 32px}
+  .section-intro{color:var(--ink-2);max-width:720px;margin:0 0 44px}
+  /* Hero */
+  .hero{padding:96px 0 80px;background:
+     radial-gradient(1200px 400px at 85% -10%, #e8f0ff 0%, rgba(232,240,255,0) 60%),
+     linear-gradient(#fff,#fff)}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;max-width:900px}
+  .fact{border-left:3px solid var(--accent);padding:4px 0 4px 14px}
+  .fact strong{display:block;font-size:15px}
+  .fact span{color:var(--muted);font-size:14.5px}
+  /* Context band */
+  .context{background:var(--ink);color:#e7edf6;padding:64px 0}
+  .context .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .context h3{color:#fff}
+  .context p{margin:0;color:#b9c5d6;font-size:15.5px}
+  .context .num{font-size:13px;font-weight:700;color:#8fb3ff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+  .step{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:#fff;position:relative}
+  .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#e8f0ff;color:var(--accent);font-weight:700;margin-bottom:18px}
+  .step p{color:var(--ink-2);margin:0;font-size:15.5px}
+  .step ul{margin:12px 0 0;padding-left:18px;color:var(--ink-2);font-size:15px}
+  /* Audiences */
+  .alt{background:var(--bg-2)}
+  .aud{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card p{color:var(--ink-2);margin:0 0 12px;font-size:15.5px}
+  .card ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
+  .card li{margin:4px 0}
+  .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:#e8f0ff;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .note{color:var(--muted);font-size:14.5px;margin-top:28px}
+  /* Sample record */
+  .sample-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:start}
+  .record{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(15,27,45,.06)}
+  .record-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--bg-2);border-bottom:1px solid var(--line);font-size:14px}
+  .example-badge{background:#fff4e5;color:var(--warn);border:1px dashed var(--warn);font-weight:800;letter-spacing:.12em;font-size:12px;padding:4px 10px;border-radius:6px}
+  .record table{width:100%;border-collapse:collapse;font-size:14.5px}
+  .record th,.record td{text-align:left;padding:11px 20px;border-bottom:1px solid var(--line);vertical-align:top}
+  .record th{width:42%;color:var(--muted);font-weight:600}
+  .record td{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;color:var(--ink)}
+  .record tr:last-child th,.record tr:last-child td{border-bottom:0}
+  .pill{display:inline-block;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}
+  .pill.flag{background:#fdecea;color:var(--flag)}
+  .pill.ok{background:#e7f5ee;color:var(--ok)}
+  .record-foot{padding:12px 20px;background:#fffaf2;border-top:1px solid var(--line);font-size:13px;color:var(--warn)}
+  .checklist{list-style:none;padding:0;margin:20px 0 0}
+  .checklist li{padding:10px 0 10px 32px;position:relative;border-bottom:1px solid var(--line);color:var(--ink-2);font-size:15.5px}
+  .checklist li::before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border-radius:50%;background:#e7f5ee url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%231f7a4d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+  .checklist strong{color:var(--ink)}
+  /* Principles */
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pr{padding:24px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+  .pr p{margin:0;color:var(--ink-2);font-size:15.5px}
+  .pr .ico{width:40px;height:40px;border-radius:10px;background:#e8f0ff;display:grid;place-items:center;margin-bottom:14px}
+  .donot{margin-top:32px;border:1px solid #f1d2cf;background:#fff8f7;border-radius:var(--radius);padding:24px 28px}
+  .donot h3{color:var(--flag)}
+  .donot ul{margin:8px 0 0;padding-left:18px;color:var(--ink-2);columns:2;column-gap:40px;font-size:15.5px}
+  .donot li{margin:4px 0;break-inside:avoid}
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+  .mail{font-size:22px;font-weight:650;text-decoration:none;border-bottom:2px solid #c9d8f5}
+  .mail:hover{border-color:var(--accent)}
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+  input,select,textarea{width:100%;font:inherit;font-size:15px;padding:11px 12px;border:1px solid #cdd5e0;border-radius:8px;background:#fff;color:var(--ink);margin-bottom:16px}
+  input:focus,select:focus,textarea:focus{outline:2px solid #bcd2fb;border-color:var(--accent)}
+  textarea{min-height:110px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .form-note{font-size:13px;color:var(--muted);margin:12px 0 0}
+  .btn-lg{padding:16px 26px;font-size:17px;border-radius:10px;word-break:break-word}
+  .coverage{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--ink-2);background:#f5f7fa;border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin:-12px 0 28px}
+  .coverage .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+  .mail-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .mail-card p{color:var(--ink-2);font-size:15.5px;margin:0 0 18px}
+  .mail-links{display:grid;gap:10px;margin-bottom:16px}
+  .mail-link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border:1px solid #cdd5e0;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15.5px}
+  .mail-link:hover{border-color:var(--accent);color:var(--accent);background:#f7faff}
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+  footer .f{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer p{margin:4px 0}
+  footer .disc{max-width:640px}
+  /* Responsive */
+  @media (max-width:900px){
+    .nav ul{display:none}
+    .facts,.context .grid,.steps,.principles{grid-template-columns:1fr}
+    .aud,.sample-grid,.contact-grid{grid-template-columns:1fr}
+    .donot ul{columns:1}
+    section{padding:64px 0}
+  }
+  @media (max-width:520px){
+    .row{grid-template-columns:1fr}
+    .record th{width:45%}
+    .record th,.record td{padding:10px 14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Short Stay Data home">
+      <span class="mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.2 8 3l6 5.2V14H2z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M5.6 10.4 7.3 12l3.2-3.4" fill="none" stroke="#8fb3ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      Short Stay Data
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#who">Who it's for</a></li>
+        <li><a href="#sample">Sample record</a></li>
+        <li><a href="#principles">Data principles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Short-term rental compliance data</p>
+      <h1>Verified data on short-term rentals that appear to operate without a valid local registration.</h1>
+      <p class="lede">Short Stay Data is an independent data service. Each month we find active short-term rental listings, check them against public city and county records, and deliver documented, verifiable records to the people working on housing, enforcement and accountability.</p>
+      <p class="coverage"><span class="dot" aria-hidden="true"></span>Currently covering Los Angeles, with more markets on request.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#contact">Request a sample dataset</a>
+        <a class="btn btn-ghost" href="#sample">See what a record contains</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Facts, not accusations</strong><span>Every record is tied to a public source you can check yourself.</span></div>
+        <div class="fact"><strong>Address-level verification</strong><span>Listings are matched to confirmed property addresses and parcels.</span></div>
+        <div class="fact"><strong>Monthly delivery</strong><span>An updated dataset each month, with changes since the previous release.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section class="context" aria-labelledby="why">
+    <div class="wrap">
+      <h2 id="why" style="color:#fff;margin-bottom:36px">Why it matters</h2>
+      <div class="grid">
+        <div>
+          <div class="num">01 · Housing</div>
+          <h3>Homes kept in the long-term market</h3>
+          <p>Many cities and counties register short-term rentals so they don't take housing out of the long-term rental market. Unregistered listings are hard to see without address-level data.</p>
+        </div>
+        <div>
+          <div class="num">02 · Enforcement</div>
+          <h3>Rules that can actually be applied</h3>
+          <p>Enforcement depends on evidence. We assemble the public-record trail (listing, address, registration status) so the responsible local office can review it and act through its own process.</p>
+        </div>
+        <div>
+          <div class="num">03 · Fair tax treatment</div>
+          <h3>A level field with hotels</h3>
+          <p>In many markets, registered short stays collect the same local hotel or occupancy tax that hotels do. Where the data supports it, we estimate the hotel-tax equivalent of unregistered activity so its fiscal impact can be read in context.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-h">Find. Verify against public records. Deliver.</h2>
+      <p class="section-intro">A listing is only included once it passes a documented verification process. If a fact can't be confirmed from a public source, it doesn't go in the dataset.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Find</h3>
+          <p>We review publicly visible short-term rental listings on major booking platforms in each market we cover.</p>
+          <ul>
+            <li>Records the registration number shown on the listing, if any</li>
+            <li>Saves an archived copy of the public listing page</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h3>Verify against city and county records</h3>
+          <p>Each listing is checked against the local registration records that are publicly available and against public property records.</p>
+          <ul>
+            <li>Registration number missing, invalid, expired or mismatched</li>
+            <li>Address confirmed and, where possible, matched to a parcel</li>
+            <li>A person reviews every record before it is delivered</li>
+          </ul>
+        </div>
+        <div class="step">
+          <h3>Deliver</h3>
+          <p>Verified records are delivered monthly as a clean, documented dataset with supporting evidence attached.</p>
+          <ul>
+            <li>CSV / spreadsheet plus evidence files</li>
+            <li>Change notes: new, resolved and removed listings</li>
+            <li>Scoped by area, district or building</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="who" class="alt" aria-labelledby="who-h">
+    <div class="wrap">
+      <p class="eyebrow">Who it's for</p>
+      <h2 id="who-h">Built for the people who need reliable facts</h2>
+      <p class="section-intro">Each dataset can be scoped to a market-wide view, a district or neighborhood, or a single building.</p>
+      <div class="aud">
+        <div class="card">
+          <span class="tag">Hospitality</span>
+          <h3>Hotel groups &amp; labor unions</h3>
+          <p>Understand the scale and location of unregistered short-term rental activity in the markets you operate and organize in.</p>
+          <ul>
+            <li>Monthly market-level and neighborhood-level counts</li>
+            <li>Hotel-tax-equivalent estimates, where local data allows</li>
+            <li>Documented records for advocacy and testimony</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Public sector</span>
+          <h3>City, county &amp; neighborhood officials</h3>
+          <p>Respond to constituent concerns with verified, address-level information that staff can review and refer through official channels.</p>
+          <ul>
+            <li>Reports by district, neighborhood or jurisdiction</li>
+            <li>Evidence packages that support existing enforcement processes</li>
+            <li>Month-over-month change tracking</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Property</span>
+          <h3>Landlords, property managers &amp; HOAs</h3>
+          <p>Find out whether units in your buildings are being listed as short-term rentals, and how those listings compare with local registration records.</p>
+          <ul>
+            <li>One-time per-building checks</li>
+            <li>Ongoing monthly monitoring for a portfolio</li>
+            <li>Monthly checks for new listings at addresses you ask us to watch</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">Research</span>
+          <h3>Journalists &amp; attorneys</h3>
+          <p>Start from a sourced, reproducible dataset rather than scraping and verifying everything yourself.</p>
+          <ul>
+            <li>Source documentation for every field</li>
+            <li>Archived copies of listing pages as evidence</li>
+            <li>Custom pulls for a specific question or area</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">Pricing depends on scope and coverage. <a href="#contact">Contact us</a> for a proposal.</p>
+    </div>
+  </section>
+
+  <!-- SAMPLE RECORD -->
+  <section id="sample" aria-labelledby="sample-h">
+    <div class="wrap sample-grid">
+      <div>
+        <p class="eyebrow">Sample record</p>
+        <h2 id="sample-h">What a verified record contains</h2>
+        <p class="section-intro" style="margin-bottom:0">Every record describes a listing and a property, not a person. Each field is backed by a source you can check yourself.</p>
+        <ul class="checklist">
+          <li><strong>Listing:</strong> platform, public listing ID, URL, capture date and an archived copy of the page.</li>
+          <li><strong>Address:</strong> confirmed street address and parcel number where available, with the method used to confirm it.</li>
+          <li><strong>Violation type:</strong> what the public record shows, for example no registration number displayed, or a number that is invalid, expired or registered to a different address.</li>
+          <li><strong>Supporting public records:</strong> references to city or county registration lookups and property records.</li>
+          <li><strong>Status history:</strong> first seen, last seen, and whether the issue has been resolved.</li>
+        </ul>
+      </div>
+      <div class="record" role="region" aria-label="Example record, fictional data">
+        <div class="record-head">
+          <span><strong>Record SSD-EX-000123</strong></span>
+          <span class="example-badge">EXAMPLE · FICTIONAL DATA</span>
+        </div>
+        <table>
+          <tbody>
+            <tr><th scope="row">Platform</th><td>Example Platform A</td></tr>
+            <tr><th scope="row">Listing ID</th><td>EX-0000-0000</td></tr>
+            <tr><th scope="row">Listing captured</th><td>2026-09-14 · snapshot archived</td></tr>
+            <tr><th scope="row">Confirmed address</th><td>1234 Example Ave, Unit 0, Example City, XX 00000</td></tr>
+            <tr><th scope="row">Parcel number</th><td>0000-000-000 (example)</td></tr>
+            <tr><th scope="row">Address confirmation</th><td>Listing photos + map pin + parcel record</td></tr>
+            <tr><th scope="row">Registration # shown</th><td>REG-00-000000 (example)</td></tr>
+            <tr><th scope="row">Registration record check</th><td><span class="pill flag">No matching active registration</span></td></tr>
+            <tr><th scope="row">Violation type</th><td>Displayed registration number not found in local records</td></tr>
+            <tr><th scope="row">District</th><td>District 0 (example)</td></tr>
+            <tr><th scope="row">Supporting records</th><td>Local registration lookup (2026-09-15); county parcel record; archived listing page</td></tr>
+            <tr><th scope="row">First seen / last seen</th><td>2026-07-02 / 2026-09-14</td></tr>
+            <tr><th scope="row">Host personal data</th><td><span class="pill ok">Not collected · not sold</span></td></tr>
+          </tbody>
+        </table>
+        <div class="record-foot">Illustration only. This record is fictional and does not describe any real listing, address or property.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section id="principles" class="alt" aria-labelledby="pr-h">
+    <div class="wrap">
+      <p class="eyebrow">Data principles</p>
+      <h2 id="pr-h">Verifiable facts only</h2>
+      <p class="section-intro">We report what public records show. A record says a listing appears to lack a valid registration; it does not draw conclusions about anyone's intent. Only the responsible city or county authority can decide whether a violation has occurred.</p>
+      <div class="principles">
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="9" cy="9" r="5.5" fill="none" stroke="#1d5fd1" stroke-width="1.8"/><path d="m13.2 13.2 4 4" stroke="#1d5fd1" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Sourced and reproducible</h3>
+          <p>Every field cites a public source and capture date, so anyone with the record can check it independently.</p>
+        </div>
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5 3.5 5v5c0 4 2.8 6.6 6.5 7.5 3.7-.9 6.5-3.5 6.5-7.5V5z" fill="none" stroke="#1d5fd1" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>No personal information sold</h3>
+          <p>We describe listings and properties. We don't compile or sell hosts' names, contact details, profiles or other personal data.</p>
+        </div>
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 10h14M10 3v14" stroke="#1d5fd1" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="10" r="7.5" fill="none" stroke="#1d5fd1" stroke-width="1.8"/></svg></div>
+          <h3>Neutral by design</h3>
+          <p>Records use neutral language like "appears to" and "no matching registration found", and they're kept separate from any opinion or advocacy.</p>
+        </div>
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="#1d5fd1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Human-reviewed</h3>
+          <p>Automated matching is followed by a manual check. Cases we can't confirm are left out rather than guessed.</p>
+        </div>
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10a6 6 0 1 0 2-4.5M4 3v3.5h3.5" fill="none" stroke="#1d5fd1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Corrections process</h3>
+          <p>Anyone, hosts included, can email a correction request with supporting information. We review it, update or remove the record if it's wrong, and note the change in the next release.</p>
+        </div>
+        <div class="pr">
+          <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="3.5" y="8.5" width="13" height="8.5" rx="1.5" fill="none" stroke="#1d5fd1" stroke-width="1.8"/><path d="M6.5 8.5V6a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="#1d5fd1" stroke-width="1.8"/></svg></div>
+          <h3>Lawful, responsible use</h3>
+          <p>Clients agree to use the data lawfully, for purposes such as policy work, compliance, reporting and referral through official channels.</p>
+        </div>
+      </div>
+      <div class="donot">
+        <h3>What we don't do</h3>
+        <ul>
+          <li>Sell or publish hosts' personal information</li>
+          <li>Make legal determinations of violations</li>
+          <li>Access non-public or password-protected data</li>
+          <li>Contact, confront or publicly name hosts</li>
+          <li>Include records we cannot verify from public sources</li>
+          <li>Support harassment or any unlawful use of the data</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-h">Request a sample or a proposal</h2>
+        <p class="section-intro">Tell us which market, buildings or question you're working on. We'll reply with a sample dataset and a proposal for coverage. Send correction requests to the same address.</p>
+        <p><a class="btn btn-primary btn-lg" href="mailto:contact@shortstaydata.com?subject=Short%20Stay%20Data%20inquiry">Email contact@shortstaydata.com</a></p>
+      </div>
+      <div class="mail-card">
+        <h3>Email us directly</h3>
+        <p>Choose the topic closest to your request. Each button opens your email app with a subject line already filled in.</p>
+        <div class="mail-links">
+          <a class="mail-link" href="mailto:contact@shortstaydata.com?subject=Sample%20dataset%20request">Request a sample dataset<span aria-hidden="true">&rarr;</span></a>
+          <a class="mail-link" href="mailto:contact@shortstaydata.com?subject=Building%20check%20or%20monitoring">Building check or monitoring<span aria-hidden="true">&rarr;</span></a>
+          <a class="mail-link" href="mailto:contact@shortstaydata.com?subject=New%20market%20request">Request coverage for a new market<span aria-hidden="true">&rarr;</span></a>
+          <a class="mail-link" href="mailto:contact@shortstaydata.com?subject=Correction%20request">Submit a correction request<span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <p class="form-note">Helpful to include: your organization, the area or addresses you're interested in, and what you need the data for. For corrections, include the record ID or listing URL.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap f">
+    <div>
+      <p><strong style="color:var(--ink)">Short Stay Data</strong> · shortstaydata.com</p>
+      <p>© 2026 Short Stay Data. All rights reserved.</p>
+    </div>
+    <div class="disc">
+      <p>Short Stay Data is an independent service and is not affiliated with any government agency or booking platform. Records reflect public information as of the capture date and are not legal determinations.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
