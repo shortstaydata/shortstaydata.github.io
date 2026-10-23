@@ -1,0 +1,19 @@
+# Short Stay Data
+
+> Short Stay Data helps owners and managers of Los Angeles apartment buildings find short-term rental listings (Airbnb and similar) advertising units in their buildings, check them against City of Los Angeles Home-Sharing records, and receive a dated, sourced evidence report. Independent; not a law firm; not affiliated with any government agency or platform.
+
+Contact: contact@shortstaydata.com · (323) 484-4358 · Los Angeles, California. Last updated October 2026.
+
+## Pages
+
+- [Home](https://shortstaydata.com/): what the service does and why owners use it, with sourced City fine amounts.
+- [How it works](https://shortstaydata.com/how-it-works.html): search and match, City records check, dated report, optional monitoring; standards (public sources only, no host personal data, no accusations); "Questions owners ask" FAQ with City sources.
+- [Example report](https://shortstaydata.com/sample-report.html): fictional example of a building report.
+- [Pricing](https://shortstaydata.com/pricing.html): building audits from $1,500; monitoring from $150 per month per building; pricing depends on building size.
+- [Contact](https://shortstaydata.com/contact.html): how to request a building check.
+
+## Key public sources
+
+- [City Planning: HARP and Property Owner Proactive Prohibition](https://planning.lacity.gov/home-sharing-application-and-registration-portal-harp)
+- [Home-Sharing Administrative Guidelines (2026)](https://planning.lacity.gov/odocument/9930e549-5f65-45d8-a0e1-986d7ea7c75a/Home_Sharing_Administrative_Guidelines_2026.pdf)
+- [Home-Sharing fine schedule effective September 1, 2025](https://planning.lacity.gov/odocument/45f6db3c-eb1d-46ae-b5d0-9bfce70f184f/Fine_Memo.pdf)
