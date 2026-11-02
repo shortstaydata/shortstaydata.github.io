@@ -67,10 +67,9 @@
 </div></section>
 
 <section class="counter" aria-label="Research to date"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:28px;align-items:center;padding-top:28px;padding-bottom:28px;border-top:1px solid #e3e8ef;border-bottom:1px solid #e3e8ef">
-  <div style="font-size:clamp(44px,7vw,64px);font-weight:800;line-height:1;color:#0f1b2d">700+</div>
+  <div style="font-size:clamp(44px,7vw,64px);font-weight:800;line-height:1;color:#0f1b2d;font-variant-numeric:tabular-nums;min-width:4ch"><span id="str-count" data-target="700">700</span>+</div>
   <div style="max-width:620px">
     <p style="margin:0;font-size:1.15rem;font-weight:600;color:#0f1b2d">suspect short-term rental listings flagged inside the City of Los Angeles</p>
-    <p style="margin:6px 0 0;color:#4a5568">Including 92 live listings verified in 15 LA apartment buildings with no City Home-Sharing registration number. Checked October 28, 2026.</p>
   </div>
 </div></section>
 
@@ -137,6 +136,12 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){var el=document.getElementById('str-count');if(!el)return;var t=parseInt(el.dataset.target,10)||0;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+function run(){var d=2200,s=null;function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(t*e).toLocaleString();if(p<1)requestAnimationFrame(f);}el.textContent='0';requestAnimationFrame(f);}
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){o.disconnect();run();}});},{threshold:0.4});o.observe(el);}else run();})();
+</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4996022a4fdb411897345fcda2850cfd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
