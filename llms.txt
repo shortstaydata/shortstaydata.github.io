@@ -1,16 +1,15 @@
 # Short Stay Data
 
-> Short Stay Data helps owners and managers of Los Angeles apartment buildings find short-term rental listings (Airbnb and similar) advertising units in their buildings, check them against City of Los Angeles Home-Sharing records, and receive a dated, sourced evidence report. Independent; not a law firm; not affiliated with any government agency or platform.
+> Short Stay Data finds live Airbnb and other short-term rental listings with no active or matching city registration by matching listings against public city registration records. It provides citywide counts, neighborhood breakdowns, full reports and monitoring for hotel groups, unions, apartment and condo associations, researchers, city stakeholders, and building owners. Current markets include Los Angeles and Chicago; the service is for markets across the United States. Independent; not a law firm; not affiliated with any government agency or platform.
 
-Contact: contact@shortstaydata.com · (323) 484-4358 · Los Angeles, California. Last updated October 2026.
+Contact: contact@shortstaydata.com · (323) 484-4358 · United States. Last updated November 2026.
 
 ## Pages
 
-- [Home](https://shortstaydata.com/): what the service does and why owners use it, with sourced City fine amounts.
-- [How it works](https://shortstaydata.com/how-it-works.html): search and match, City records check, dated report, optional monitoring; standards (public sources only, no host personal data, no accusations); "Questions owners ask" FAQ with City sources.
-- [Example report](https://shortstaydata.com/sample-report.html): fictional example of a building report.
-- [Pricing](https://shortstaydata.com/pricing.html): building audits from $1,500; monitoring from $150 per month per building; pricing depends on building size.
-- [Contact](https://shortstaydata.com/contact.html): how to request a building check.
+- [Home](https://shortstaydata.com/): what the service does, who it is for, and a running count of listings found with no active or matching city registration.
+- [How it works](https://shortstaydata.com/how-it-works.html): matching listings to public registration records; standards; building-level checks; Los Angeles owner FAQ with City sources.
+- [Example report](https://shortstaydata.com/sample-report.html): a fictional example of a building report.
+- [Contact](https://shortstaydata.com/contact.html): how to request a free one-listing sample or a quote. Pricing is quoted by city and scope.
 
 ## Key public sources
 

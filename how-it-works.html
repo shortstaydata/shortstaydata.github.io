@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How We Detect Unauthorized Short-Term Rentals in LA Buildings</title>
-<meta name="description" content="How Short Stay Data finds short-term rental listings in your building, checks City records, and delivers a dated evidence report.">
+<title>How We Match Short-Term Rentals to City Registration Records</title>
+<meta name="description" content="We search live short-term rental listings and match them against public city registration records, then deliver citywide counts, neighborhood breakdowns, full reports and monitoring.">
 <meta name="theme-color" content="#0f1b2d">
 <link rel="canonical" href="https://shortstaydata.com/how-it-works.html">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Short Stay Data">
-<meta property="og:title" content="How We Detect Unauthorized Short-Term Rentals in LA Buildings">
-<meta property="og:description" content="How Short Stay Data finds short-term rental listings in your building, checks City records, and delivers a dated evidence report.">
+<meta property="og:title" content="How We Match Short-Term Rentals to City Registration Records">
+<meta property="og:description" content="We search live short-term rental listings and match them against public city registration records, then deliver citywide counts, neighborhood breakdowns, full reports and monitoring.">
 <meta property="og:url" content="https://shortstaydata.com/how-it-works.html">
 <meta property="og:image" content="https://shortstaydata.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Short Stay Data: find unapproved short-term rentals in your Los Angeles building.">
+<meta property="og:image:alt" content="Short Stay Data: short-term rentals with no active or matching city registration. 1,070+ listings found.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How We Detect Unauthorized Short-Term Rentals in LA Buildings">
-<meta name="twitter:description" content="How Short Stay Data finds short-term rental listings in your building, checks City records, and delivers a dated evidence report.">
+<meta name="twitter:title" content="How We Match Short-Term Rentals to City Registration Records">
+<meta name="twitter:description" content="We search live short-term rental listings and match them against public city registration records, then deliver citywide counts, neighborhood breakdowns, full reports and monitoring.">
 <meta name="twitter:image" content="https://shortstaydata.com/og.png">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
@@ -31,10 +31,18 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What does Short Stay Data check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We search live short-term rental listings and match them against the city's public registration records. We report whether we found an active or matching city registration, not whether a particular listing is a legal violation. Some listings may be exempt or registered under another name."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Can a property owner be held responsible for a tenant's short-term rental?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The City's Home-Sharing Administrative Guidelines state that a property owner may be held responsible for Home-Sharing violations occurring on their property. The City also states that it does not mediate disputes between property owners and tenants about Home-Sharing."
+        "text": "In Los Angeles, the City's Home-Sharing Administrative Guidelines state that a property owner may be held responsible for Home-Sharing violations occurring on their property. The City also states that it does not mediate disputes between property owners and tenants about Home-Sharing."
       }
     },
     {
@@ -42,7 +50,7 @@
       "name": "Can a tenant do Home-Sharing without the owner's approval?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Under the ordinance, a renter or lessee may not engage in Home-Sharing without the landlord's prior written approval, and must give the City a copy of that approval when applying for registration."
+        "text": "In Los Angeles, under the ordinance, a renter or lessee may not engage in Home-Sharing without the landlord's prior written approval, and must give the City a copy of that approval when applying for registration."
       }
     },
     {
@@ -50,12 +58,12 @@
       "name": "Can a rent-stabilized (RSO) unit be used for Home-Sharing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A proposed short-term rental cannot be subject to the Rent Stabilization Ordinance (LAMC Chapter 15). The City notes that a property's RSO status can be reviewed in ZIMAS under the Housing tab."
+        "text": "In Los Angeles, a proposed short-term rental cannot be subject to the Rent Stabilization Ordinance (LAMC Chapter 15). The City notes that a property's RSO status can be reviewed in ZIMAS under the Housing tab."
       }
     },
     {
       "@type": "Question",
-      "name": "How many nights a year can a registered host rent out a unit?",
+      "name": "How many nights a year can a registered host rent out a unit in Los Angeles?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A Regular Home-Sharing Registration allows up to 120 days in a calendar year. Going beyond 120 days requires an Extended Home-Sharing Registration."
@@ -66,12 +74,12 @@
       "name": "Does a listing have to show a registration number?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The guidelines prohibit advertising Home-Sharing without a valid registration number issued to that host, and require every advertisement to clearly list it."
+        "text": "In Los Angeles, the guidelines prohibit advertising Home-Sharing without a valid registration number issued to that host, and require every advertisement to clearly list it. In other current markets, including Chicago, short-term rental listings are generally expected to show a City registration number. We report whether we found an active registration on the city's public records."
       }
     },
     {
       "@type": "Question",
-      "name": "How can an owner stop tenants from registering units for Home-Sharing?",
+      "name": "How can a Los Angeles owner stop tenants from registering units for Home-Sharing?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The owner of record can file the Property Owner's Proactive Prohibition through the City's HARP portal. The form requires a notarized, hand-drawn signature, and each property needs its own form. It does not revoke an approval the owner has already given; that requires a separate revocation form."
@@ -88,52 +96,66 @@
       <span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.2 8 3l6 5.2V14H2z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M5.6 10.4 7.3 12l3.2-3.4" fill="none" stroke="#8fb3ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       Short Stay Data
     </a>
-    <nav aria-label="Primary"><ul><li><a href="/">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="sample-report.html">Example report</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <nav aria-label="Primary"><ul><li><a href="/">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="sample-report.html">Example report</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
   </div>
 </header>
 <main>
 
 <section class="page-hero"><div class="wrap">
   <p class="eyebrow">How it works</p>
-  <h1>From a building address to a dated evidence report.</h1>
-  <p class="lede">You give us an address. We find what's listed there, check it against City records, and document everything so you or your property manager can act.</p>
+  <h1>From a live listing to a dated registration check.</h1>
+  <p class="lede">We search short-term rental listings, check them against public city registration records, and give you a dated count or report. We say what the records show. We don't decide whether a rule was broken.</p>
 </div></section>
 
 <section style="padding-top:24px"><div class="wrap">
   <div class="grid2">
-    <div class="card"><span class="tag">Step 1</span><h3>We search and match listings to your building</h3><p>We review public listings on major short-term rental platforms in and around your area, including listings pinned in a different city. Each one is matched to your building using its own public text, photos, amenities, layout and reviews.</p></div>
-    <div class="card"><span class="tag">Step 2</span><h3>We check City and County records</h3><p>For each listing we check the City of Los Angeles Home-Sharing registration records. For the building we pull public records: parcel number, unit count, zoning and rent stabilization (RSO) status.</p></div>
-    <div class="card"><span class="tag">Step 3</span><h3>You get a dated evidence report</h3><p>One report for the building, covering every listing and host account we found. Each finding includes the listing link, how we matched it, the registration check result and the date checked. It's ready to hand to your property manager or the City.</p></div>
-    <div class="card"><span class="tag">Step 4</span><h3>Optional monitoring</h3><p>Listings come and go. With monitoring we check daily, alert you the same day a new listing appears, and send a dated monthly record of what we found and what was removed.</p></div>
+    <div class="card"><span class="tag">Step 1</span><h3>We search live listings</h3><p>We review public listings on major short-term rental platforms that advertise stays under 30 nights, including listings pinned in a different city or neighborhood.</p></div>
+    <div class="card"><span class="tag">Step 2</span><h3>We check city registration records</h3><p>We match each listing against the city's public registration records and record whether we found an active, matching registration.</p></div>
+    <div class="card"><span class="tag">Step 3</span><h3>You get a dated report</h3><p>That can be a citywide count, a neighborhood breakdown, or a full report with the listing, the registration check and the date we checked it.</p></div>
+    <div class="card"><span class="tag">Step 4</span><h3>Optional monitoring</h3><p>Listings come and go. With monitoring we keep checking, alert you when a new listing appears, and send a dated record of what we found and what was removed.</p></div>
   </div>
 </div></section>
 
 <section class="alt"><div class="wrap">
-  <h2>What you can do with the report</h2>
-  <ul class="checklist" style="max-width:760px">
-    <li><strong>Match units from your own records.</strong> Listings rarely show unit numbers. Photos, layout and parking details usually let your team identify the unit.</li>
-    <li><strong>Follow your lease process.</strong> Your property manager can use the report when addressing the issue with residents.</li>
-    <li><strong>File the City's prohibition.</strong> Owners can file the <a href="https://planning.lacity.gov/home-sharing-application-and-registration-portal-harp" rel="noopener">Property Owner Proactive Prohibition</a> through the City's HARP portal so tenants can't register units for Home-Sharing.</li>
-    <li><strong>Keep a record.</strong> A dated report shows when you learned about a listing and what you did next.</li>
-  </ul>
-  <div class="callout"><p>We don't offer legal advice, and a report isn't legal protection. It gives you the facts quickly so you can document the issue and act.</p></div>
-</div></section>
-
-<section><div class="wrap">
   <p class="eyebrow">Our standards</p>
   <h2>Verifiable facts, no personal data.</h2>
   <div class="grid3" style="margin-top:24px">
     <div class="card"><h3>Sourced and dated</h3><p>Every finding cites a public source and the date we checked it, so anyone can verify it.</p></div>
-    <div class="card"><h3>No host personal details</h3><p>We report on listings, addresses and public records. We don't compile or sell hosts' names, contact details or profiles.</p></div>
-    <div class="card"><h3>No accusations</h3><p>We say what the records show, such as "no matching registration found." Only the City decides whether a violation occurred.</p></div>
+    <div class="card"><h3>No host personal details</h3><p>We report on listings, areas and public records. We don't compile or sell hosts' names, contact details or profiles.</p></div>
+    <div class="card"><h3>No accusations</h3><p>We say what the records show, such as "no active City registration" or "no matching registration found." Only the city decides whether a violation occurred.</p></div>
     <div class="card"><h3>Public sources only</h3><p>We don't access private or password-protected data, and we don't contact hosts or guests.</p></div>
-    <div class="card"><h3>Human-reviewed</h3><p>A person reviews every match. If we can't confirm a listing is in your building, we say so or leave it out.</p></div>
-    <div class="card"><h3>Corrections</h3><p>Anyone, hosts included, can email <a href="mailto:contact@shortstaydata.com?subject=Correction%20request">contact@shortstaydata.com</a> with a correction. If we got something wrong, we fix it.</p></div>
+    <div class="card"><h3>Human-reviewed</h3><p>A person reviews close matches. If we can't confirm a listing belongs where it appears to, we say so or leave it out.</p></div>
   </div>
 </div></section>
+
+<section id="owners"><div class="wrap">
+  <p class="eyebrow">For building owners</p>
+  <h2>From a building address to a dated evidence report.</h2>
+  <p class="intro">You give us an address. We find what's listed there, including listings pinned in a different neighborhood or city, and check them against city records. Hosts often pin a listing a few miles away. We match from photos, descriptions and building details, not just the map pin.</p>
+  <div class="grid2">
+    <div class="card"><h3>Search and match</h3><p>We review public listings in and around the area, then match each one to the building using its own public text, photos, amenities, layout and reviews.</p></div>
+    <div class="card"><h3>Check city and building records</h3><p>For each listing we check the city's public registration records. For Los Angeles buildings we can also pull public parcel, unit-count, zoning and rent stabilization (RSO) status.</p></div>
+    <div class="card"><h3>Get a dated report</h3><p>One report for the building, covering every listing we can confirm. Each finding includes the listing link, how we matched it, the registration check and the date checked.</p></div>
+    <div class="card"><h3>Optional monitoring</h3><p>With monitoring we check daily, alert you the same day a new listing appears, and send a dated monthly record of what we found and what was removed.</p></div>
+  </div>
+  <h2 style="margin-top:48px">What an owner can do with the report</h2>
+  <ul class="checklist" style="max-width:760px">
+    <li><strong>Match units from your own records.</strong> Listings rarely show unit numbers. Photos, layout and parking details usually let your team identify the unit.</li>
+    <li><strong>Follow your lease process.</strong> Your property manager can use the report when addressing the issue with residents.</li>
+    <li><strong>File the City's prohibition, if you are in Los Angeles.</strong> Owners can file the <a href="https://planning.lacity.gov/home-sharing-application-and-registration-portal-harp" rel="noopener">Property Owner Proactive Prohibition</a> through the City's HARP portal so tenants can't register units for Home-Sharing.</li>
+    <li><strong>Keep a record.</strong> A dated report shows when you learned about a listing and what you did next.</li>
+  </ul>
+  <div class="callout"><p>We don't offer legal advice, and a report isn't legal protection. It gives you the facts so you can document the issue and act.</p></div>
+</div></section>
+
 <section class="alt" id="faq"><div class="wrap">
   <p class="eyebrow">FAQ</p>
-  <h2>Questions owners ask</h2>
+  <h2>Questions people ask</h2>
+  <div class="grid2">
+    <div class="card"><h3>What does a "no active or matching city registration" finding mean?</h3><p>It means we did not find an active registration in the city's public records that matches the listing. Some listings may be exempt, or registered under another name. We report what the records show. The city decides whether a rule was broken.</p></div>
+    <div class="card"><h3>Do you name buildings or hosts on this site?</h3><p>No. Public pages do not name buildings or hosts. A report goes to the person who requested it.</p></div>
+  </div>
+  <h2 style="margin-top:44px">Questions Los Angeles owners ask</h2>
   <p class="intro"><strong>What is Home-Sharing?</strong> Home-Sharing is the City of Los Angeles term for renting all or part of a host's own primary residence as a short-term rental, meaning a stay of 30 consecutive days or less. It requires a City registration. City-approved hotels, motels, bed and breakfasts and Transient Occupancy Residential Structures are not short-term rentals under the ordinance. (<a href="https://planning.lacity.gov/odocument/9930e549-5f65-45d8-a0e1-986d7ea7c75a/Home_Sharing_Administrative_Guidelines_2026.pdf" rel="noopener">Home-Sharing Administrative Guidelines, 2026</a>; as of October 2026.)</p>
   <div class="grid2">
     <div class="card"><h3>Can a property owner be held responsible for a tenant's short-term rental?</h3><p>Yes. The City's Home-Sharing Administrative Guidelines state that a property owner may be held responsible for Home-Sharing violations occurring on their property. The City also states that it does not mediate disputes between property owners and tenants about Home-Sharing.</p><p class="note" style="margin-top:8px">Source: <a href="https://planning.lacity.gov/odocument/9930e549-5f65-45d8-a0e1-986d7ea7c75a/Home_Sharing_Administrative_Guidelines_2026.pdf" rel="noopener">Home-Sharing Administrative Guidelines (2026), Section IX</a>. As of October 2026.</p></div>
@@ -146,24 +168,24 @@
   <div class="callout"><p>These answers summarize public City documents as of October 2026. They are not legal advice.</p></div>
 </div></section>
 <section><div class="wrap">
-  <h2>Want to know what's listed in your building?</h2>
-  <p class="intro">Send us the address. We'll tell you how many listings we find before you commit to anything.</p>
-  <div class="ctas"><a class="btn btn-primary" href="mailto:contact@shortstaydata.com?subject=Building%20check%20request">Email contact@shortstaydata.com</a><a class="btn btn-ghost" href="tel:+13234844358">Call (323) 484-4358</a></div>
+  <h2>Want a free one-listing sample?</h2>
+  <p class="intro">Email us the city you care about, or a building address if you want a building-level check.</p>
+  <div class="ctas"><a class="btn btn-primary" href="mailto:contact@shortstaydata.com?subject=Free%20one-listing%20sample">Email contact@shortstaydata.com</a><a class="btn btn-ghost" href="tel:+13234844358">Call (323) 484-4358</a></div>
 </div></section>
 
 </main>
 <footer>
   <div class="wrap f">
     <div>
-      <p><strong style="color:var(--ink)">Short Stay Data</strong> · Los Angeles</p>
+      <p><strong style="color:var(--ink)">Short Stay Data</strong> · United States</p>
+      <p>Current markets include Los Angeles and Chicago</p>
       <p><a href="mailto:contact@shortstaydata.com">contact@shortstaydata.com</a> · <a href="tel:+13234844358">(323) 484-4358</a></p>
-      <p>© 2026 Short Stay Data · Last updated October 2026</p>
+      <p>© 2026 Short Stay Data · Last updated November 2026</p>
     </div>
     <div class="disc">
-      <p>Short Stay Data is an independent service. We are not affiliated with any government agency or booking platform, and we are not a law firm. Reports describe public information as of the dates shown and are not legal advice or legal determinations.</p>
+      <p>Short Stay Data is an independent service. We are not affiliated with any government agency or booking platform, and we are not a law firm. Reports describe public information as of the dates shown and are not legal advice or legal determinations. A listing with no active or matching city registration may still be exempt, or registered under another name. We report what the records show. The city decides whether a rule was broken.</p>
     </div>
   </div>
-</footer>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4996022a4fdb411897345fcda2850cfd"}'></script><!-- End Cloudflare Web Analytics -->
+</footer><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4996022a4fdb411897345fcda2850cfd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
