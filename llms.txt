@@ -1,18 +1,16 @@
 # Short Stay Data
 
-> Short Stay Data finds live Airbnb and other short-term rental listings with no active or matching city registration by matching listings against public city registration records. It provides citywide counts, neighborhood breakdowns, full reports and monitoring for hotel groups, unions, apartment and condo associations, researchers, city stakeholders, and building owners. Current markets include Los Angeles and Chicago; the service is for markets across the United States. Independent; not a law firm; not affiliated with any government agency or platform.
+> Short Stay Data finds live Airbnb and other short-term rental listings with no active or matching city registration by matching listings against public city registration records. It provides citywide counts, neighborhood breakdowns, full reports and monitoring for hotel groups, unions, apartment and condo associations, researchers, city stakeholders, and building owners. The service is for markets across the United States. Independent; not a law firm; not affiliated with any government agency or platform.
 
 Contact: contact@shortstaydata.com · (323) 484-4358 · United States. Last updated November 2026.
 
 ## Pages
 
 - [Home](https://shortstaydata.com/): what the service does, who it is for, and a running count of listings found with no active or matching city registration.
-- [How it works](https://shortstaydata.com/how-it-works.html): matching listings to public registration records; standards; building-level checks; Los Angeles owner FAQ with City sources.
+- [How it works](https://shortstaydata.com/how-it-works.html): matching listings to public registration records; standards; building-level checks; FAQ.
 - [Example report](https://shortstaydata.com/sample-report.html): a fictional example of a building report.
 - [Contact](https://shortstaydata.com/contact.html): how to request a free one-listing sample or a quote. Pricing is quoted by city and scope.
 
-## Key public sources
+## Sources
 
-- [City Planning: HARP and Property Owner Proactive Prohibition](https://planning.lacity.gov/home-sharing-application-and-registration-portal-harp)
-- [Home-Sharing Administrative Guidelines (2026)](https://planning.lacity.gov/odocument/9930e549-5f65-45d8-a0e1-986d7ea7c75a/Home_Sharing_Administrative_Guidelines_2026.pdf)
-- [Home-Sharing fine schedule effective September 1, 2025](https://planning.lacity.gov/odocument/45f6db3c-eb1d-46ae-b5d0-9bfce70f184f/Fine_Memo.pdf)
+Reports cite the relevant city's public registration records and the date they were checked.
